@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Level 4
+{% endblock %}
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+    <header class="alert alert-primary border text-center" role="alert">
+        {{ message }}
+    </header>
+{% endif %}
+{% endwith %}
+
+{% block main %}
+    <div class="hidden">
+        <form action="/4" method="post">
+            <button class="btn btn-primary" type="submit">Next Level</button>
+        </form>
+    </div>
+{% endblock %}
+
+<!-- Created by Ethan Ali -->

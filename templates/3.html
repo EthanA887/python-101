@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Level 3
+{% endblock %}
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+    <header class="alert alert-primary border text-center" role="alert">
+        {{ message }}
+    </header>
+{% endif %}
+{% endwith %}
+
+{% block main %}
+    <h1>Conditionals</h1>
+    <div class="text1">
+        In Python, conditionals can be grouped into three different categories:
+        <ul>
+            <li><code>if</code> is used to determine whether a block of code will be executed or not. If the program finds the condition defined in the <code>if</code> statement to be true, it will go ahead and execute the code block inside the if statement.</li>
+            <li><code>elif</code> is used to check for multiple conditions and execute the block of code within if any of the conditions are found to be true.</li>
+            <li><code>else</code> works with the <code>if</code> and <code>elif</code> statements to execute a code block if all the conditions above are found to be false.</li>
+        </ul>
+        <code>if</code> and <code>else</code> are often used by themselves—the only statement necessary to complete a conditional is <code>if</code>. Here's an example of an if-else statement in action:
+        <iframe class="sus" src="https://trinket.io/embed/python/b2c5311f18" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+        And an example of an if-elif-else statement:
+        <iframe class="sus" src="https://trinket.io/embed/python/85807df1b4" width="100%" height="556" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+        Note how <code>==</code> is used to compare strings—this is to ensure that your program doesn't get confused and interpret a single <code>=</code> as defining a variable. 
+    </div>
+    
+    <hr>
+    <h3>Your Task</h3>
+    <div class="text1">
+        Take an input from the user. If the user inputs the string <code>Marco</code>, the program should reply with <code>Polo</code>. Otherwise, the program shouldn't print anything.
+        <iframe class="sus" src="https://trinket.io/embed/python/43eb6e1e23" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="hidden">
+        <form action="/3" method="post">
+            <button class="btn btn-primary" type="submit">Next Level</button>
+        </form>
+    </div>
+{% endblock %}
+
+<!-- Created by Ethan Ali -->

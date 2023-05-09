@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Level 1
+{% endblock %}
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+    <header class="alert alert-primary border text-center" role="alert">
+        {{ message }}
+    </header>
+{% endif %}
+{% endwith %}
+
+{% block main %}
+    <h1>Print and Input</h1>
+    <div class="text1">
+        Printing is a universal function across programming languages. In Python, the <code>print()</code> function prints the specified message on the screen.
+        <iframe class="sus" src="https://trinket.io/embed/python/2b9f714dff?runOption=run" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+        In addition, you can ask the user for input with the function <code>input()</code>.
+        <iframe class="sus" src="https://trinket.io/embed/python/68b279858c?runOption=run" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+        The code above prompts the user to enter a value in the command line, then prints exactly what they wrote.
+    </div>
+    
+    <hr>
+    <h3>Your Task</h3>
+    <div class="text1">
+        Ask the user for their name, then say hi to them. For example, when the user inputs <code>Ethan</code>, the program should output <code>Hello, Ethan</code>.
+        <iframe class="sus" src="https://trinket.io/embed/python/43eb6e1e23" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="hidden">
+        <form action="/1" method="post">
+            <button class="btn btn-primary" type="submit">Next Level</button>
+        </form>
+    </div>
+{% endblock %}
+
+<!-- Created by Ethan Ali -->

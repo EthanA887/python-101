@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Level 2
+{% endblock %}
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+    <header class="alert alert-primary border text-center" role="alert">
+        {{ message }}
+    </header>
+{% endif %}
+{% endwith %}
+
+{% block main %}
+    <h1>Data Types</h1>
+    <div class="text1">
+        In Python, variables can store 4 main types of data:
+        <ul>
+            <li>String (str): A sequence of characters. Example: <code>"Hello world!"</code></li>
+            <li>Integer (int): A whole number, positive or negative. Examples: <code>6</code>, <code>-720</code>, <code>86400</code></li>
+            <li>Float (float): Floating-point values, also known as decimals. Examples: <code>54.9872</code>, <code>-26.8</code></li>
+            <li>Boolean (bool): A binary data type that can only be either true or false. Examples: <code>True</code>, </code><code>False</code></li>
+        </ul>
+        To initialize a variable, just name it and define its value after an equals sign. For example:
+        <iframe class="sus" src="https://trinket.io/embed/python/6744e5c962" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+        In this case, <code>name</code> is a string, <code>age</code> is a float, and <code>grade_seven</code> is a Boolean value. You can change a variable in the same way. Remember to refer to your variable by its name. For example:
+        <iframe class="sus" src="https://trinket.io/embed/python/36ab9ef964" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+        Try adding <br><br><code>print(name)</code><br><code>print(age)</code><br><code>print(grade_seven)</code><br><br> to the above code and pay attention to the output. A Python variable will always take on the last value you assigned to it.
+        <br><br>You can also use the function <code>type(var)</code> to find a variable's data type. In the above example, <code>type(name)</code> would output <code>str</code>, <code>type(age)</code> would output <code>float</code>, and <code>type(grade_seven)</code> would output <code>bool</code>.
+        <br><br>Finally, you can use the following functions to change a variable's type.
+        <ul>
+            <li><code>str(var)</code> converts the variable to a string;</li>
+            <li><code>int(var)</code> converts the variable to an integer;</li>
+            <li><code>float(var)</code> converts the variable to a floating-point value;</li>
+            <li><code>bool(var)</code> converts the variable to a Boolean value.</li>
+        </ul>
+        Note that conversions may not always work—for example, you would get an error if you attempted to convert an integer to a Boolean value.
+        <br><br>An important use for this is to convert a user's input into another data type. For example, if you wanted to add a year to someone's age for their birthday, you would use the following code:
+        <iframe class="sus" src="https://trinket.io/embed/python/5c34350d15" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+        This ensures that you can modify the variable <code>age</code> as an integer.
+    </div>
+    
+    <hr>
+    <h3>Your Task</h3>
+    <div class="text1">
+        Accept an integer from the user as input, then convert it to a floating-point value and print the result.
+        <iframe class="sus" src="https://trinket.io/embed/python/43eb6e1e23" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="hidden">
+        <form action="/2" method="post">
+            <button class="btn btn-primary" type="submit">Next Level</button>
+        </form>
+    </div>
+{% endblock %}
+
+<!-- Created by Ethan Ali -->
