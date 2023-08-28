@@ -4,5 +4,3 @@ CREATE TABLE users (
     hash TEXT NOT NULL,
     level INTEGER NOT NULL DEFAULT 1
 );
-
-/* Created by Ethan Ali */
